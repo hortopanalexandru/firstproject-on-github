@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="Hortopan Ion-Alexandru" />
+    <title>Hortopan Alexandru | Website</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <div class="menu-icon"><i class="fa fa-bars fa-2x"></i></div>
+
+                <div class="logo">
+                    <p class="line anim-typewriter">Welcome</p>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Me</a></li>
+                        <li><a href="#">Portofolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="mid">
+                <p class="hide">Be that person that</p>
+            </div>
+            <div class="search-box">
+                <input class="search-txt" type="text" name="" placeholder="Type for search.." />
+                <a class="search-btn" href="#"><i class="fas fa-search"></i></a>
+            </div>
+        </header>
+    </div>
+
+    <!-- Scripts -->
+    <script type="text/javascript">
+        // Menu-toggle button
+        var searchBtn = document.querySelector(".search-box");
+
+        $(document).ready(function () {
+            $(".menu-icon").on("click", function () {
+                $("nav ul").toggleClass("showing");
+            });
+        });
+
+        // Scrolling Effect
+
+        $(window).on("scroll", function () {
+            if ($(window).scrollTop()) {
+                $("nav").addClass("black");
+                searchBtn.style.opacity = "0";
+            } else {
+                $("nav").removeClass("black");
+                searchBtn.style.opacity = "1";
+            }
+        });
+        setTimeout(function () {
+            document.querySelector(".hide").innerHTML = "you wanna be..";
+        }, 3000), setTimeout(function () {
+            document.querySelector(".hide").style.display = "none";
+        }, 6000);
+    </script>
+</body>
+
+</html>
